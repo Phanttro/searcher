@@ -1,2 +1,4 @@
 .dcu
 .exe
+.pas.*
+__history/
