@@ -1,0 +1,111 @@
+package RV2Comp;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  vclimg,
+  dbrtl,
+  FireDACCommon,
+  FireDACCommonDriver,
+  FireDAC,
+  vcldb,
+  dxCoreRS21,
+  cxLibraryRS21,
+  dxGDIPlusRS21,
+  dxThemeRS21,
+  cxDataRS21,
+  cxEditorsRS21,
+  cxPageControlRS21,
+  dxLayoutControlRS21,
+  cxGridRS21,
+  dxSkinsCoreRS21,
+  dxSkinscxPCPainterRS21,
+  dxSkinBlackRS21,
+  dxSkinBlueprintRS21,
+  dxSkinBlueRS21,
+  dxSkinCaramelRS21,
+  dxSkinCoffeeRS21,
+  dxSkinDarkRoomRS21,
+  dxSkinDarkSideRS21,
+  dxSkinDevExpressDarkStyleRS21,
+  dxSkinDevExpressStyleRS21,
+  dxSkinFoggyRS21,
+  dxSkinGlassOceansRS21,
+  dxSkinHighContrastRS21,
+  dxSkiniMaginaryRS21,
+  dxSkinLilianRS21,
+  dxSkinLiquidSkyRS21,
+  dxSkinLondonLiquidSkyRS21,
+  dxSkinMcSkinRS21,
+  dxSkinMetropolisDarkRS21,
+  dxSkinMetropolisRS21,
+  dxSkinMoneyTwinsRS21,
+  dxSkinOffice2007BlackRS21,
+  dxSkinOffice2007BlueRS21,
+  dxSkinOffice2007GreenRS21,
+  dxSkinOffice2007PinkRS21,
+  dxSkinOffice2007SilverRS21,
+  dxSkinOffice2010BlackRS21,
+  dxSkinOffice2010BlueRS21,
+  dxSkinOffice2010SilverRS21,
+  dxSkinOffice2013DarkGrayRS21,
+  dxSkinOffice2013LightGrayRS21,
+  dxSkinOffice2013WhiteRS21,
+  dxSkinPumpkinRS21,
+  dxSkinSevenClassicRS21,
+  dxSkinSevenRS21,
+  dxSkinSharpPlusRS21,
+  dxSkinSharpRS21,
+  dxSkinSilverRS21,
+  dxSkinSpringTimeRS21,
+  dxSkinStardustRS21,
+  dxSkinSummer2008RS21,
+  dxSkinTheAsphaltWorldRS21,
+  dxSkinValentineRS21,
+  dxSkinVS2010RS21,
+  dxSkinWhiteprintRS21,
+  dxSkinXmas2008BlueRS21,
+  DbxCommonDriver,
+  dbexpress,
+  acntDelphiXE7_R,
+  dsnap,
+  adortl,
+  vclFireDAC;
+
+contains
+  untSearcher in 'untSearcher.pas',
+  untPesquisa in 'untPesquisa.pas' {frmPesquisa},
+  untFuncoes in '..\..\Library\untFuncoes.pas',
+  untShowSQL in 'untShowSQL.pas' {frmShowSQL},
+  untCxTraducao in 'untCxTraducao.pas',
+  untQueryType in 'untQueryType.pas';
+
+end.

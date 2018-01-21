@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7300EF84-886A-461C-AD6F-860A41D0689A}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="RV2Comp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="dclRV2Comp.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="RV2Comp">
+        <MSBuild Projects="RV2Comp.dproj"/>
+    </Target>
+    <Target Name="RV2Comp:Clean">
+        <MSBuild Projects="RV2Comp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RV2Comp:Make">
+        <MSBuild Projects="RV2Comp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="dclRV2Comp">
+        <MSBuild Projects="dclRV2Comp.dproj"/>
+    </Target>
+    <Target Name="dclRV2Comp:Clean">
+        <MSBuild Projects="dclRV2Comp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="dclRV2Comp:Make">
+        <MSBuild Projects="dclRV2Comp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="RV2Comp;dclRV2Comp"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="RV2Comp:Clean;dclRV2Comp:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="RV2Comp:Make;dclRV2Comp:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
